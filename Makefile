@@ -20,8 +20,8 @@ run: utils.yaml
 
 
 utils.yaml: utils_raw.yaml config.yaml
-	grep main config.yaml | cat utils_raw.smk -
-	make style
+	grep main config.yaml | cat utils_raw.yaml - > $@
+	# make style
 
 
 .PHONY style:
@@ -32,4 +32,4 @@ style:
 
 .PHONY clean:
 clean:
-	rm -rf *.txt .snakemake
+	rm -rf *.txt .snakemake utils.yaml
