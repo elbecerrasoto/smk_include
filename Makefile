@@ -19,11 +19,6 @@ run: utils.yaml
 	snakemake -c 1
 
 
-utils.yaml: utils_raw.yaml config.yaml
-	grep main config.yaml | cat utils_raw.yaml - > $@
-	make style
-
-
 .PHONY style:
 style:
 	snakefmt .
