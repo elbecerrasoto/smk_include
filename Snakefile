@@ -12,7 +12,7 @@ FINCLUD = config["finclud"]
 print(f"my smk file is {SINCLUD}")
 
 
-include: INCLUDED
+include: SINCLUD
 
 
 rule all:
