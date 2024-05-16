@@ -17,6 +17,7 @@ dry-run: utils.yaml
 .PHONY run:
 run: utils.yaml
 	snakemake -c 1
+	tree
 
 
 .PHONY style:
@@ -27,4 +28,4 @@ style:
 
 .PHONY clean:
 clean:
-	rm -rf *.txt .snakemake utils.yaml
+	rm -rf *.txt .snakemake
