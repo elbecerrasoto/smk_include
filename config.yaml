@@ -1,0 +1,3 @@
+main: "one.txt"
+sinclud: "utils.smk"
+finclud: "two.txt"
