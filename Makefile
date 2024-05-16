@@ -21,7 +21,7 @@ run: utils.yaml
 
 utils.yaml: utils_raw.yaml config.yaml
 	grep main config.yaml | cat utils_raw.yaml - > $@
-	# make style
+	make style
 
 
 .PHONY style:
