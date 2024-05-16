@@ -3,17 +3,17 @@ configfile: "utils.yaml"
 
 
 MSG = config["msg"]
+FINCLUD = config["finclud"]
 
-FILE_QM = __file__
 print(f"my msg is {MSG}")
-print(f"whever is __file__ {__file__}")
+print(f"__file__ is {__file__}")
 
 
 rule two:
     input:
         f"one.txt",
     output:
-        f"two.txt",
+        f"{FINCLUD}",
     shell:
         """
         touch {output}
